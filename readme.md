@@ -1,4 +1,16 @@
-# Import module
+# Installation
+
+## Prerequisites
+
+- `go version`
+
+```cmd
+go version go1.21.5 linux/amd64
+```
+
+- Install package: `go get github.com/chauhoangminhnguyen/material-zui-go`
+
+## Import module
 
 - import module: `github.com/chauhoangminhnguyen/material-zui-go/{module name}`
   -  ex: module `list` so we use:

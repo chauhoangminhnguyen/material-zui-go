@@ -1,7 +1,11 @@
 package mz_list
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func Hello() {
-	fmt.Println("hello")
+	now := time.Now()
+	fmt.Println("hello", now)
 }
