@@ -1,9 +1,13 @@
 package main
 
 import (
-	mz_list "github.com/chauhoangminhnguyen/material-zui-go/list"
+	// list "github.com/chauhoangminhnguyen/material-zui-go/list"
+	utility "github.com/chauhoangminhnguyen/material-zui-go/utility"
 )
 
 func main() {
-	mz_list.Hello()
+	// list.ListTest()
+	// list.ListTest1()
+	utility.UtilityTest()
+	// utility.UtilityTest1()
 }

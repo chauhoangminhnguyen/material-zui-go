@@ -9,6 +9,7 @@ go version go1.21.5 linux/amd64
 ```
 
 - Install package: `go get github.com/chauhoangminhnguyen/material-zui-go`
+  - package url: https://github.com/chauhoangminhnguyen/material-zui-go
 
 ## Import module
 

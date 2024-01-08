@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func ListTest() {
+func ListTest1() {
 	now := time.Now()
-	fmt.Println("ListTest", now)
+	fmt.Println("ListTest1", now)
 }
