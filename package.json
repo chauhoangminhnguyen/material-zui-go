@@ -1,11 +1,23 @@
 {
   "name": "material-zui-go",
   "license": "MIT",
+  "author": {
+    "name": "chauhoangminhnguyen",
+    "email": "chauhoangminhnguyen@gmail.com"
+  },
+  "description": "Material Zui Golang",
+  "keywords": [
+    "material",
+    "zui",
+    "material zui",
+    "material zui go",
+    "@material-zui/go"
+  ],
   "scripts": {
     "start": "go run main.go",
     "mod": "go mod init",
     "work": "go work use",
-    "version": "git tag v0.0.1",
+    "set-tag": "git tag v0.0.1",
     "push": "git push v0.0.1"
   },
   "version": "0.0.0"
