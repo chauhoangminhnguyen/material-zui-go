@@ -5,7 +5,7 @@
     "name": "chauhoangminhnguyen",
     "email": "chauhoangminhnguyen@gmail.com"
   },
-  "description": "Material Zui Golang",
+  "description": "Material Zui Go",
   "keywords": [
     "material",
     "zui",
@@ -17,8 +17,8 @@
     "start": "go run main.go",
     "mod": "go mod init",
     "work": "go work use",
-    "set-tag": "git tag v0.0.2",
-    "push": "git push v0.0.2"
+    "set-tag": "git tag v0.0.3",
+    "push": "git push origin v0.0.3"
   },
   "version": "0.0.0"
 }

@@ -7,5 +7,5 @@ import (
 
 func Hello() {
 	now := time.Now()
-	fmt.Println("hello", now)
+	fmt.Println("hello", now, 3)
 }
