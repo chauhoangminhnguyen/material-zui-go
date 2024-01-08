@@ -1,0 +1,12 @@
+{
+  "name": "material-zui-go",
+  "license": "MIT",
+  "scripts": {
+    "start": "go run main.go",
+    "mod": "go mod init",
+    "work": "go work use",
+    "version": "git tag v0.0.1",
+    "push": "git push v0.0.1"
+  },
+  "version": "0.0.0"
+}
