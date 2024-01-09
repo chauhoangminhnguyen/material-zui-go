@@ -1,6 +1,7 @@
 {
   "name": "material-zui-go",
   "license": "MIT",
+  "version": "v0.0.4",
   "author": {
     "name": "chauhoangminhnguyen",
     "email": "chauhoangminhnguyen@gmail.com"
@@ -17,8 +18,8 @@
     "start": "go run main.go",
     "mod": "go mod init",
     "work": "go work use",
-    "set-tag": "git tag $version",
-    "push": "git push origin v0.0.3"
-  },
-  "version": "v0.0.4"
+    "set-tag": "git tag $npm_package_version",
+    "push": "git push && git push origin $npm_package_version",
+    "pub": "yarn set-tag && yarn push"
+  }
 }

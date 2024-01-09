@@ -2,20 +2,21 @@
 
 ## Prerequisites
 
-- `go version`
+- Check version
+  ```cmd
+  go version // go version go1.21.5 linux/amd64
+  ```
 
-```cmd
-go version go1.21.5 linux/amd64
-```
-
-- Install package: `go get github.com/chauhoangminhnguyen/material-zui-go`
+- Install package
+  ```cmd
+  go get github.com/chauhoangminhnguyen/material-zui-go
+  ```
   - package url: https://github.com/chauhoangminhnguyen/material-zui-go
 
 ## Import module
-
-- import module: `github.com/chauhoangminhnguyen/material-zui-go/{module name}`
-  -  ex: module `list` so we use:
   ```go
+  // import github.com/chauhoangminhnguyen/material-zui-go/{module name}
+  // ex: module `list` so we use:
   import "github.com/chauhoangminhnguyen/material-zui-go/list"
   // or
   import (
@@ -27,4 +28,5 @@ go version go1.21.5 linux/amd64
 
 <ol>
   <li>list</li>
+  <li>utility</li>
 </ol>
