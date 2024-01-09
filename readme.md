@@ -30,5 +30,6 @@
 
 <ol>
   <li>list</li>
+  <li>number</li>
   <li>utility</li>
 </ol>
