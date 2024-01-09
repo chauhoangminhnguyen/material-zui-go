@@ -1,7 +1,7 @@
 {
   "name": "material-zui-go",
   "license": "MIT",
-  "version": "v0.0.4",
+  "version": "v0.0.5",
   "author": {
     "name": "chauhoangminhnguyen",
     "email": "chauhoangminhnguyen@gmail.com"
@@ -12,7 +12,7 @@
     "zui",
     "material zui",
     "material zui go",
-    "@material-zui/go"
+    "material-zui-go"
   ],
   "scripts": {
     "start": "go run main.go",
