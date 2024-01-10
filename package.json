@@ -15,10 +15,13 @@
   ],
   "scripts": {
     "start": "go run main.go",
+    "test": "cd test && ginkgo",
+    "test-c": "cd test && ginkgo -cover",
+    "test2": "cd test && ginkgo -r -p -race -cover ./...",
     "mod": "go mod init",
     "work": "go work use",
-    "set-tag": "git tag v0.0.7",
-    "push": "git push && git push origin v0.0.7",
+    "set-tag": "git tag v0.0.8",
+    "push": "git push && git push origin v0.0.8",
     "pub": "yarn set-tag && yarn push"
   }
 }

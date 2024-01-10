@@ -1,35 +1,36 @@
-# Installation
+# Prerequisites
 
-## Prerequisites
+## Check version
 
-- Check version
   ```cmd
   go version
   ```
-  - result: `go version go1.21.5 linux/amd64`
+  - **result**: `go version go1.21.5 linux/amd64`
 
-- Install package
+## Install
+
   ```cmd
   go get github.com/chauhoangminhnguyen/material-zui-go
   ```
-  - github: https://github.com/chauhoangminhnguyen/material-zui-go
-  - pkg: https://pkg.go.dev/github.com/chauhoangminhnguyen/material-zui-go
+  - [[versions](https://pkg.go.dev/github.com/chauhoangminhnguyen/material-zui-go?tab=versions)] [pkg](https://pkg.go.dev/github.com/chauhoangminhnguyen/material-zui-go)
+  - [[versions](https://github.com/chauhoangminhnguyen/material-zui-go/tags)] [github](https://github.com/chauhoangminhnguyen/material-zui-go)
 
-## Import module
+## Import
+
   ```go
   // import github.com/chauhoangminhnguyen/material-zui-go/{module name}
   // ex: module `list` so we use:
-  import "github.com/chauhoangminhnguyen/material-zui-go/list"
+  import "github.com/chauhoangminhnguyen/material-zui-go/array"
   // or
   import (
-    list "github.com/chauhoangminhnguyen/material-zui-go/list"
+    array "github.com/chauhoangminhnguyen/material-zui-go/array"
   )
   ```
 
 # Modules
 
 <ol>
-  <li>list</li>
+  <li>array</li>
   <li>number</li>
   <li>utility</li>
 </ol>

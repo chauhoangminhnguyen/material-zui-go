@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	list "github.com/chauhoangminhnguyen/material-zui-go/list"
+	array "github.com/chauhoangminhnguyen/material-zui-go/array"
 )
 
 func UtilityTest() {
 	now := time.Now()
 	fmt.Println("UtilityTest", now)
-	list.ListTest()
+	array.ArrayTest()
 }
