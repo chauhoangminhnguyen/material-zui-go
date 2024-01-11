@@ -22,6 +22,7 @@
     "work": "go work use",
     "set-tag": "git tag v0.0.8",
     "push": "git push && git push origin v0.0.8",
-    "pub": "yarn set-tag && yarn push"
+    "pub": "go run tool/main.go",
+    "pub2": "yarn set-tag && yarn push"
   }
 }
