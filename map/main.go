@@ -41,10 +41,13 @@ func Entries[V interface{}](value map[string]V) [][2]interface{} {
 	return entries
 }
 
-// SortKey sorts the keys of a map[string]V and returns a new map with the sorted keys.
-//
-// value: the map[string]V to be sorted
-// Returns: a new map with the sorted keys
+/*
+SortKey sorts the keys of a map[string]V and returns a new map with the sorted keys.
+
+value: the map[string]V to be sorted
+
+Returns: a new map with the sorted keys
+*/
 func SortKey[V any](value map[string]V) map[string]V {
 	result := map[string]V{}
 	keys := Keys(value)

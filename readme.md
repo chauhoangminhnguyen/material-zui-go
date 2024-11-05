@@ -31,8 +31,10 @@
 
 <ol>
   <li>array</li>
+  <li>map</li>
   <li>number</li>
+  <li>request</li>
+  <li>shell</li>
+  <li>string</li>
   <li>utility</li>
-  <!-- <li>string</li> -->
-  <!-- <li>map</li> -->
 </ol>

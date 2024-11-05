@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func executeSingle(command string) error {
+func ExecuteSingle(command string) error {
 	command = strings.Trim(command, "\n")
 	command = strings.Trim(command, " ")
 	args := strings.Split(command, " ")
@@ -14,32 +14,6 @@ func executeSingle(command string) error {
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout
 	return cmd.Run()
-}
-
-func Execute(commandInput string) []error {
-	commandInput = strings.Trim(commandInput, "\n")
-	commands := strings.Split(commandInput, "&&")
-	return ExecuteMultiple(commands)
-}
-
-func ExecuteMultiple(command []string) []error {
-	errors := []error{}
-	for _, v := range command {
-		err := executeSingle(v)
-		errors = append(errors, err)
-		if err != nil {
-			return errors
-		}
-	}
-	return errors
-}
-
-func ExecuteMultipleSkipError(command []string) []error {
-	errors := []error{}
-	for _, v := range command {
-		errors = append(errors, executeSingle(v))
-	}
-	return errors
 }
 
 func ExecuteWithOutput(command string) (string, error) {
@@ -53,4 +27,30 @@ func ExecuteWithOutput(command string) (string, error) {
 		return "", err
 	}
 	return string(output), nil
+}
+
+func Execute(command string) []error {
+	command = strings.Trim(command, "\n")
+	commands := strings.Split(command, "&&")
+	return ExecuteMultiple(commands)
+}
+
+func ExecuteMultiple(commands []string) []error {
+	errors := []error{}
+	for _, v := range commands {
+		err := ExecuteSingle(v)
+		errors = append(errors, err)
+		if err != nil {
+			return errors
+		}
+	}
+	return errors
+}
+
+func ExecuteMultipleSkipError(commands []string) []error {
+	errors := []error{}
+	for _, v := range commands {
+		errors = append(errors, ExecuteSingle(v))
+	}
+	return errors
 }

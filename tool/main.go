@@ -22,7 +22,6 @@ func main() {
 			fmt.Fprintln(os.Stderr, err)
 		}
 	}
-	// doAction("push")
 }
 
 func doAction(action string) error {
@@ -35,45 +34,11 @@ func doAction(action string) error {
 }
 
 func push() error {
-	output, _ := ZuiShell.ExecuteWithOutput("git describe --tags --abbrev=0")
-	output = strings.TrimSuffix(output, "\n")
-	newVersion := "v" + ZuiS.UpgradeVersion(output)
-	// pushCommand := fmt.Sprintf("git tag %s && git push && git push origin %s", newVersion, newVersion)
-	pushCommand := fmt.Sprintf("git tag %s", newVersion)
+	currentTag, _ := ZuiShell.ExecuteWithOutput("git describe --tags --abbrev=0")
+	currentTag = strings.TrimSuffix(currentTag, "\n")
+	newVersion := "v" + ZuiS.UpgradeVersion(currentTag)
+	pushCommand := fmt.Sprintf("git tag %s && git push && git push origin %s", newVersion, newVersion)
 	fmt.Println(pushCommand)
 	errs := ZuiShell.Execute(pushCommand)
 	return errs[0]
 }
-
-// func execute(command string) error {
-// 	command = strings.TrimSuffix(command, "\n")
-// 	args := strings.Split(command, " ")
-// 	cmd := exec.Command(args[0], args[1:]...)
-// 	cmd.Stderr = os.Stderr
-// 	cmd.Stdout = os.Stdout
-// 	return cmd.Run()
-// }
-
-// func executeWithOutput(command string) (string, error) {
-// 	command = strings.TrimSuffix(command, "\n")
-// 	args := strings.Split(command, " ")
-// 	cmd := exec.Command(args[0], args[1:]...)
-// 	cmd.Stderr = os.Stderr
-
-// 	output, err := cmd.Output()
-// 	if err != nil {
-// 		return "", err
-// 	}
-// 	return string(output), nil
-// }
-
-// func execInput(input string) error {
-// 	input = strings.TrimSuffix(input, "\n")
-
-// 	cmd := exec.Command(input)
-
-// 	cmd.Stderr = os.Stderr
-// 	cmd.Stdout = os.Stdout
-
-// 	return cmd.Run()
-// }

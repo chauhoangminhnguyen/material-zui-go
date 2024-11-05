@@ -1,7 +1,6 @@
 package main_test
 
 import (
-	"fmt"
 	"slices"
 
 	mz_map "github.com/chauhoangminhnguyen/material-zui-go/map"
@@ -14,7 +13,7 @@ var _ = Describe("Map", func() {
 		It("default", func() {
 			value := map[string]int{"b": 1, "a": 2, "c": 3}
 			r := mz_map.Keys(value)
-			fmt.Println(value, r)
+			// fmt.Println(value, r)
 			// Expect(r).To(Equal([]string{"b", "a", "c"}))
 			Expect(slices.Contains(r, "a")).To(Equal(true))
 		})
@@ -36,7 +35,7 @@ var _ = Describe("Map", func() {
 				"key3": "value3",
 			}
 			entries := mz_map.Entries(m)
-			fmt.Println(m, entries)
+			// fmt.Println(m, entries)
 			Expect(len(entries)).To(Equal(len(m)))
 
 			// key1 := entries[0][0]
